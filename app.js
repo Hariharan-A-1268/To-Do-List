@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
   // mongoose.connect('mongodb://127.0.0.1:27017/todolistDB');
 
-  mongoose.connect('mongodb+srv://Hariharan_A:AVNH1268@cluster0.awnduiy.mongodb.net/todolistDB');
+  mongoose.connect('mongodb+srv://Hariharan_A:PASSWORD@cluster0.awnduiy.mongodb.net/todolistDB');
 
   const itemsSchema = new mongoose.Schema({
     name: String
@@ -45,37 +45,6 @@ app.use(express.static("public"));
   };
 
   const List = mongoose.model("List", listSchema);
-
-  // item.insertMany(defaultItems).then(
-  //   (result) => {
-  //      console.log("Successfully saved default items to itemsDB");
-  //   }
-  // ).catch(
-  //   (err) => {
-  //      console.log(err);
-  //   }
-  // )
-
-
-  // item.deleteMany({name: "<-Hit this to delete a item."}).then(
-  //   (result) => {
-  //      console.log("Successfully deleted default items to itemsDB");
-  //   }
-  // ).catch(
-  //   (err) => {
-  //      console.log(err);
-  //   }
-  // )
-
-  // List.deleteMany({name: "Home"}).then(
-  //   (result) => {
-  //      console.log("Successfully deleted!");
-  //   }
-  // ).catch(
-  //   (err) => {
-  //      console.log(err);
-  //   }
-  // )
 
   app.get("/", async (req, res)=>{
 
